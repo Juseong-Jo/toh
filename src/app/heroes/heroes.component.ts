@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Hero} from '../hero';
 
 
@@ -20,12 +20,26 @@ export class HeroesComponent implements OnInit {
   // };
 
   // 클래스 객체로 생성
-  hero: Hero = {
-    id: 1,
-    name: 'Win Storm'
-  };
+  // hero: Hero = {
+  //   id: 1,
+  //   name: 'Win Storm'
+  // };
 
-  constructor() {}
+
+  hero: Hero;
+
+  // 초기화 객체 01
+  // constructor() {
+  //   this.hero = new Hero();
+  //   this.hero.id = 1;
+  //   this.hero.name = 'win storm';
+  // }
+
+  // 초기화 객체 02
+  constructor() {
+    this.hero = new Hero(1, 'win storm');
+  }
+
 
   ngOnInit() {
   }
